@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2c5926",
+                        "earthy-slate": "#4a4a4a",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24 }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-earthy-slate dark:text-slate-200">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-primary/10 px-6 md:px-20 py-4 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">park</span>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Carbon Fix</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8 items-center">
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-earthy-slate dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Models</a>
+<a class="text-earthy-slate dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Mission</a>
+<a class="text-earthy-slate dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">Impact</a>
+<a class="text-earthy-slate dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+</nav>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+                    Get Started
+                </button>
+</div>
+</header>
+<main class="flex-1">
+<!-- Hero Section -->
+<section class="px-6 md:px-20 py-12 md:py-20 max-w-[1200px] mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-primary font-bold tracking-widest text-xs uppercase">Restoring Sahyadri Biodiversity</span>
+<h1 class="text-slate-900 dark:text-slate-100 text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+                                Measurable Local Action for a Sustainable Future
+                            </h1>
+<p class="text-earthy-slate dark:text-slate-400 text-lg leading-relaxed max-w-lg">
+                                Directly fund and monitor reforestation in your own backyard. We focus on real growth and local impact, moving beyond the complexity of carbon trading.
+                            </p>
+</div>
+<div class="flex gap-4">
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:shadow-lg transition-all">
+                                Start a Project
+                            </button>
+<button class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 border border-primary/20 bg-white text-primary text-base font-bold hover:bg-primary/5 transition-all">
+                                View Impact
+                            </button>
+</div>
+</div>
+<div class="relative">
+<div class="w-full aspect-[4/3] bg-primary/10 rounded-xl overflow-hidden shadow-2xl">
+<img alt="Native Sahyadri forest landscape" class="w-full h-full object-cover" data-alt="Lush green native forest in Sahyadri mountains" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeabWtpXznfimTUK7Z2elIfQMNTuRfmkFy_T-fmZEk2o7amjOmCnFiaEPpppHcwLU6XxzZT7JrSQUV7IKZAX0up_l_QDIG_mn7ETD_5GywG7QRPM3WuIgSKNHI6oi71YzjMy5tPzffO0alM8pNJASP_tx5QUfz-WBrEBMCz70Mjz67h-HKChKqKNcl5DRYDL7tl2OnZ6OYvIYqg5r-riXr2iCavPyneRxZJkkXjwxPqlSUw3l4yLb68PRxLwUyfNPftLSg3XIYYAc"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-6 rounded-lg shadow-xl hidden lg:block">
+<p class="text-primary font-bold text-2xl">10,000+</p>
+<p class="text-earthy-slate dark:text-slate-400 text-sm">Native Saplings Planted</p>
+</div>
+</div>
+</div>
+</section>
+<!-- What We Are NOT Section -->
+<section class="bg-white dark:bg-background-dark/50 py-20 px-6 md:px-20 border-y border-primary/5">
+<div class="max-w-[1200px] mx-auto">
+<div class="flex flex-col gap-4 mb-12">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-bold tracking-tight">
+                            What We Are NOT
+                        </h2>
+<p class="text-earthy-slate dark:text-slate-400 text-lg max-w-2xl">
+                            Building trust through radical transparency. We are a direct-action platform, not a financial middleman.
+                        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 p-8 rounded-xl border border-primary/10 bg-background-light dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-red-500 text-4xl">cancel</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Not a Trading Floor</h3>
+<p class="text-earthy-slate dark:text-slate-400 leading-relaxed">
+                                We don't trade carbon credits. Every rupee goes directly to planting and the long-term maintenance of local ecosystems.
+                            </p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-xl border border-primary/10 bg-background-light dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-red-500 text-4xl">monitoring</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">No Speculative Credits</h3>
+<p class="text-earthy-slate dark:text-slate-400 leading-relaxed">
+                                We measure real biomass and survival rates through physical verification, not abstract paper-based financial projections.
+                            </p>
+</div>
+<div class="flex flex-col gap-4 p-8 rounded-xl border border-primary/10 bg-background-light dark:bg-slate-800/50">
+<span class="material-symbols-outlined text-red-500 text-4xl">visibility_off</span>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">No Hidden Offsets</h3>
+<p class="text-earthy-slate dark:text-slate-400 leading-relaxed">
+                                We focus exclusively on Sahyadri biodiversity. No distant, unverified forests or opaque global offsetting schemes.
+                            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Models Section -->
+<section class="py-20 px-6 md:px-20 max-w-[1200px] mx-auto">
+<div class="text-center mb-16">
+<h2 class="text-slate-900 dark:text-slate-100 text-3xl md:text-4xl font-bold mb-4 tracking-tight">Our Core Models</h2>
+<p class="text-earthy-slate dark:text-slate-400 max-w-xl mx-auto">Tailored afforestation strategies for different environments and impact goals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- School & College -->
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="aspect-video overflow-hidden">
+<img alt="School garden" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Students planting trees in a school garden" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrp0sA4TkQcWUsVLLWix96ZLUjubekyouKwJbVhn3Al4521yWh-5Dq3oAozTZCfX-mZ_HS_i6oesZmQeV8a4Jnin3t2hjXfibqaWob6FW3hxf9vzqfE58U4vEKFMMveWMhQ2MX5KYSErMG_Cn066xyvYhDrSHj50O5SXtp74QTEX4IfwdaPM3qTI7fkxUuWGieEWdi70ivxPlU6UUjzRhBjRnw5cBZILr_qvg73EJOSVhN0x4ovtCZrwHj6DUB6y-h7vSzYcSZBd8"/>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">school</span>
+<span class="text-xs font-bold uppercase tracking-wider">Education</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">School &amp; College</h3>
+<p class="text-earthy-slate dark:text-slate-400 text-sm leading-relaxed">
+                                Micro-forests on educational campuses designed to inspire the next generation through hands-on environmental stewardship.
+                            </p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-primary font-semibold text-sm">Educational Impact Focus</span>
+</div>
+</div>
+</div>
+<!-- Trail & Fort -->
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="aspect-video overflow-hidden">
+<img alt="Mountain trail" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Misty mountain trail in the Western Ghats" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOQuShBfDIoHBBthIltSuJSeI2ziJbEDDW9KcM2BeS1yQbJe8Ske7l-DWsCPzgSzcFHWXE9XeuNSLAvlqQV4QktgF0i_uO8RhDm91lza1EPfE09MW2HNmstBQoWOyj-qo9Xa7XJJ7eIrr77dF7LcZz0eTZHafHo1fzO_bxT_ODVqVWie8S0yZ3iFmuSTW1eBqG_e950IDTO4wC42DM6pxMrhG7F3zXLGPfwlQ9rondYEGO1sKGx3bh1vav4IxzhBkJwIv_4Rtt6FQ"/>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">hiking</span>
+<span class="text-xs font-bold uppercase tracking-wider">Tourism</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Trail &amp; Fort</h3>
+<p class="text-earthy-slate dark:text-slate-400 text-sm leading-relaxed">
+                                Restoring native flora along historic trekking paths in the Western Ghats to support eco-tourism and prevent soil erosion.
+                            </p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-primary font-semibold text-sm">Eco-Tourism Support</span>
+</div>
+</div>
+</div>
+<!-- Large-Scale Forest -->
+<div class="group flex flex-col bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-primary/5">
+<div class="aspect-video overflow-hidden">
+<img alt="Dense forest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Dense green native forest canopy from above" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9gQV-B5jgFQwL_M8jzdJCqiSSgj7gd_FuoC7hvamdICvgOC39gmWxQfg4x2UNba07g2LGVIvt5yB0EpPfuHrCBjaTQPnmBdEb8bYjKpV-Fr4nrSTM4iPocvBAfo0i2ZvnrHkdL3HBDxyu5zMBHOGcfiWoSGEfRqs6FyidVyw_6sI5SvSBg_zmOmWkFO9-RaiBiNN6iqOIjfFRO8Wq4qgvi5gYeZvgzLO3y9SwhlCtu5_XSWtnlnL01b8UONR3VL3hSaytIvCOYFw"/>
+</div>
+<div class="p-6 flex flex-col gap-3">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-sm">forest</span>
+<span class="text-xs font-bold uppercase tracking-wider">Conservation</span>
+</div>
+<h3 class="text-slate-900 dark:text-slate-100 text-xl font-bold">Large-Scale Forest</h3>
+<p class="text-earthy-slate dark:text-slate-400 text-sm leading-relaxed">
+                                High-density afforestation using Sahyadri native species for long-term climate resilience and habitat restoration.
+                            </p>
+<div class="pt-4 border-t border-primary/5">
+<span class="text-primary font-semibold text-sm">Biodiversity Hub</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Species Callout -->
+<section class="bg-primary py-16 px-6 md:px-20 text-white overflow-hidden relative">
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px]">eco</span>
+</div>
+<div class="max-w-[1200px] mx-auto relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-6">
+<h2 class="text-3xl md:text-5xl font-black leading-tight">Preserving the Sahyadri Heritage</h2>
+<p class="text-white/80 text-lg leading-relaxed">
+                                We don't just plant "trees". We restore ecosystems using native species like Anjan, Hirda, and Behada—perfectly adapted to the local Western Ghats terrain.
+                            </p>
+<div class="flex gap-8">
+<div class="flex flex-col">
+<span class="text-2xl font-bold">45+</span>
+<span class="text-sm text-white/60 uppercase tracking-widest">Native Species</span>
+</div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold">92%</span>
+<span class="text-sm text-white/60 uppercase tracking-widest">Survival Rate</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="rounded-lg overflow-hidden h-40">
+<img alt="Leaf close up" class="w-full h-full object-cover" data-alt="Detailed close up of native green leaf" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_RI0uUhRKOqNGADN9OY7mbpUpH6AInfP1SdIsgAqmFeKV62debP38eEe4QFrgx7ZlgUPmxOX12oNnmrrTcMPGzmJ3nrU0mChxwrpnBiX02XHLwgAXK0268DU41QTQQqHsWkbeDEv5vBH57DCsGCFpzBVb8qmnzxhs4s8sLNRiS_zuhhKu9mutxnrL32mMo8mNB6-nSayj4_WTA-FUpX6IMcN6lTcOCiAcraMgtcNLy4q-Vza58EHi56-X4ABGJooo5Vpjr3VbY1A"/>
+</div>
+<div class="rounded-lg overflow-hidden h-40 mt-8">
+<img alt="Forest path" class="w-full h-full object-cover" data-alt="Sunlight filtering through forest trees" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNfjy-ssGgNZ1pwK8Xs5f0X4o-dfAoSixniYvB4IwPvSSVL0Qfdx72zdPnWcRTU7DvPetWeeHJfa4WV1JPFDZFz8iq2xYy8IeHH1qbJnxM4DFxOnkImMcEIviLnsZHRbCmSoKWhZQnY6KA9_p1gpMPJheUXu8U5x85jcuN_UQZkbi3MTREQ5NUGOWaCis6TmGRQ7MoihCyOI-nI3J0ICACoNYxRjZP17G1Go6ECqj96TKsY0T-0vommvPqr9CCpkW87tzOMpJQPD4"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-900 text-white py-12 px-6 md:px-20">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-start gap-10">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-3xl">park</span>
+<h2 class="text-white text-xl font-bold">Carbon Fix</h2>
+</div>
+<p class="text-slate-400 max-w-xs text-sm">
+                        Building a greener future through localized, direct-impact environmental restoration projects.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Platform</h4>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Models</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Map Viewer</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Reporting</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Company</h4>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Mission</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Impact</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-bold text-sm uppercase tracking-widest text-primary">Legal</h4>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Privacy</a>
+<a class="text-slate-400 hover:text-white text-sm" href="#">Terms</a>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-slate-800 text-center text-slate-500 text-xs">
+                © 2024 Carbon Fix. All rights reserved. Locally rooted, globally impactful.
+            </div>
+</footer>
+</div>
+</div>
+</body></html>

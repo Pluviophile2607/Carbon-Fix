@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Evidence Dashboard - Carbon Fix</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2c5926",
+                        "background-light": "#f6f7f6",
+                        "background-dark": "#161d15",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .step-active { font-variation-settings: 'FILL' 1; color: #2c5926; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center gap-4">
+<div class="bg-primary p-1.5 rounded-lg text-white">
+<span class="material-symbols-outlined block">eco</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white">Carbon Fix</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-primary" href="#">Dashboard</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Projects</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Resources</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary transition-colors" href="#">Settings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white"></span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30" data-alt="Student user avatar placeholder">
+<span class="text-xs font-bold text-primary">JS</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<!-- Header Section -->
+<div class="mb-8">
+<nav aria-label="Breadcrumb" class="flex text-sm text-slate-500 mb-2">
+<ol class="flex items-center space-x-2">
+<li><a class="hover:text-primary transition-colors" href="#">Projects</a></li>
+<li class="flex items-center space-x-2">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-slate-900 font-medium">Urban Reforestation Site A-12</span>
+</li>
+</ol>
+</nav>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">Student Evidence Dashboard</h1>
+<p class="text-slate-500 dark:text-slate-400 mt-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">location_on</span>
+                        Portland Metropolitan District · Phase 3: Execution
+                    </p>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 bg-white border border-slate-200 text-slate-700 font-bold rounded-lg hover:bg-slate-50 transition-all text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">download</span>
+                        Export Log
+                    </button>
+<button class="px-4 py-2 bg-primary text-white font-bold rounded-lg hover:bg-primary/90 transition-all text-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">add_a_photo</span>
+                        Submit Evidence
+                    </button>
+</div>
+</div>
+</div>
+<!-- Lifecycle Tracker -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6 mb-8 shadow-sm">
+<h3 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-6">Project Lifecycle</h3>
+<div class="relative">
+<div class="absolute top-5 left-0 w-full h-0.5 bg-slate-100 dark:bg-slate-800"></div>
+<div class="relative flex justify-between">
+<!-- Site Survey -->
+<div class="flex flex-col items-center gap-3 bg-white dark:bg-background-dark px-2">
+<div class="z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Site Survey</p>
+<p class="text-xs text-slate-400">Oct 12, 2023</p>
+</div>
+</div>
+<!-- Onboarding -->
+<div class="flex flex-col items-center gap-3 bg-white dark:bg-background-dark px-2">
+<div class="z-10 w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">check</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-slate-900 dark:text-white">Onboarding</p>
+<p class="text-xs text-slate-400">Oct 15, 2023</p>
+</div>
+</div>
+<!-- Execution -->
+<div class="flex flex-col items-center gap-3 bg-white dark:bg-background-dark px-2">
+<div class="z-10 w-10 h-10 rounded-full border-4 border-primary bg-white flex items-center justify-center text-primary animate-pulse">
+<div class="w-2 h-2 bg-primary rounded-full"></div>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-primary">Execution</p>
+<p class="text-xs text-primary font-medium italic">In Progress</p>
+</div>
+</div>
+<!-- Handover -->
+<div class="flex flex-col items-center gap-3 bg-white dark:bg-background-dark px-2">
+<div class="z-10 w-10 h-10 rounded-full border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-lg">circle</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-medium text-slate-400">Handover</p>
+<p class="text-xs text-slate-400">Upcoming</p>
+</div>
+</div>
+<!-- Monitoring -->
+<div class="flex flex-col items-center gap-3 bg-white dark:bg-background-dark px-2">
+<div class="z-10 w-10 h-10 rounded-full border-2 border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex items-center justify-center text-slate-300">
+<span class="material-symbols-outlined text-lg">circle</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-medium text-slate-400">Monitoring</p>
+<p class="text-xs text-slate-400">Future</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Sidebar: Metadata & Guidelines -->
+<div class="lg:col-span-1 space-y-6">
+<div class="bg-primary/5 border border-primary/20 rounded-xl p-6">
+<h3 class="font-bold text-primary flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined">info</span>
+                        Submission Guidelines
+                    </h3>
+<ul class="space-y-3 text-sm text-slate-700 dark:text-slate-300">
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                            Ensure GPS is enabled on your device.
+                        </li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                            Photos must show clear tree identification.
+                        </li>
+<li class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-base">check_circle</span>
+                            Include scale reference where possible.
+                        </li>
+</ul>
+</div>
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm">
+<h3 class="font-bold text-slate-900 dark:text-white mb-4">Project Map</h3>
+<div class="aspect-square bg-slate-100 dark:bg-slate-800 rounded-lg overflow-hidden relative" data-location="Portland, Oregon" style="">
+<!-- Simulated Map Image Placeholder -->
+<div class="absolute inset-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center" data-alt="Satellite map view of reforestation site">
+<div class="w-4 h-4 bg-primary rounded-full ring-4 ring-primary/30"></div>
+</div>
+<div class="absolute bottom-2 left-2 bg-white/90 px-2 py-1 rounded text-[10px] font-bold text-slate-600">
+                            45.523062, -122.676482
+                        </div>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex justify-between text-xs">
+<span class="text-slate-500">Total Plots</span>
+<span class="font-bold">14 / 20</span>
+</div>
+<div class="w-full bg-slate-100 rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content: Evidence Log -->
+<div class="lg:col-span-2 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white">Evidence Log</h2>
+<div class="flex gap-2">
+<button class="p-1.5 text-slate-400 border border-slate-200 rounded hover:bg-white transition-colors">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-1.5 text-primary border border-primary/20 bg-primary/10 rounded">
+<span class="material-symbols-outlined">list</span>
+</button>
+</div>
+</div>
+<!-- Evidence Card 1 -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:border-primary/30 transition-all">
+<div class="p-4 flex gap-4">
+<div class="w-32 h-32 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden flex-shrink-0">
+<div class="w-full h-full bg-gradient-to-br from-green-100 to-emerald-200" data-alt="Photo of a newly planted sapling"></div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-slate-900 dark:text-white">Sapling Installation - Plot A-1</h4>
+<span class="px-2 py-1 bg-green-100 text-green-700 text-[10px] font-bold rounded uppercase">Verified</span>
+</div>
+<p class="text-sm text-slate-500 mt-1">Douglas Fir sapling planted in central quadrant. Soil preparation complete with organic mulch layer.</p>
+</div>
+<div class="flex flex-wrap gap-4 mt-2">
+<div class="flex items-center gap-1.5 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                    45.523° N, 122.676° W
+                                </div>
+<div class="flex items-center gap-1.5 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                    Oct 18, 2023 · 14:22
+                                </div>
+<div class="flex items-center gap-1.5 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">devices</span>
+                                    iPhone 14 Pro
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Evidence Card 2 -->
+<div class="bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 rounded-xl overflow-hidden shadow-sm hover:border-primary/30 transition-all">
+<div class="p-4 flex gap-4">
+<div class="w-32 h-32 rounded-lg bg-slate-100 dark:bg-slate-800 overflow-hidden flex-shrink-0 relative">
+<div class="w-full h-full bg-gradient-to-br from-slate-200 to-blue-100" data-alt="Video thumbnail of site irrigation check"></div>
+<div class="absolute inset-0 flex items-center justify-center text-white/80">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+</div>
+</div>
+<div class="flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-slate-900 dark:text-white">Irrigation Test Video</h4>
+<span class="px-2 py-1 bg-yellow-100 text-yellow-700 text-[10px] font-bold rounded uppercase">Pending Review</span>
+</div>
+<p class="text-sm text-slate-500 mt-1">Video demonstrating the drip irrigation flow for Plot A-1 to A-5. Pressure is within nominal range.</p>
+</div>
+<div class="flex flex-wrap gap-4 mt-2">
+<div class="flex items-center gap-1.5 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">location_on</span>
+                                    45.524° N, 122.675° W
+                                </div>
+<div class="flex items-center gap-1.5 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                    Oct 19, 2023 · 09:15
+                                </div>
+<div class="flex items-center gap-1.5 text-xs text-slate-400">
+<span class="material-symbols-outlined text-sm">videocam</span>
+                                    00:45s · MP4
+                                </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Empty State / Add New -->
+<button class="w-full py-12 border-2 border-dashed border-slate-200 dark:border-slate-800 rounded-xl flex flex-col items-center justify-center gap-4 hover:bg-slate-50 dark:hover:bg-slate-900/50 hover:border-primary/30 transition-all group">
+<div class="w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-400 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">cloud_upload</span>
+</div>
+<div class="text-center">
+<p class="font-bold text-slate-900 dark:text-white">Upload New Evidence</p>
+<p class="text-xs text-slate-400 mt-1">Drag and drop images or videos here</p>
+</div>
+</button>
+</div>
+</div>
+</main>
+<footer class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 border-t border-slate-200 dark:border-slate-800 mt-12">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4 text-slate-400">
+<span class="material-symbols-outlined">eco</span>
+<p class="text-xs">© 2023 Carbon Fix Educational Initiative. All evidence is geotagged and encrypted.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-xs font-bold text-slate-500 hover:text-primary" href="#">Help Center</a>
+<a class="text-xs font-bold text-slate-500 hover:text-primary" href="#">Data Policy</a>
+<a class="text-xs font-bold text-slate-500 hover:text-primary" href="#">Project Standards</a>
+</div>
+</div>
+</footer>
+</body></html>

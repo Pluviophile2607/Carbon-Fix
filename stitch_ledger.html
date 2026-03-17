@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Carbon Fix | Impact Ledger</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#2c5926",
+                "background-light": "#f6f7f6",
+                "background-dark": "#161d15",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex min-h-screen w-full flex-col">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-50 flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-3">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Carbon Fix</h2>
+</div>
+<div class="flex items-center gap-4">
+<nav class="hidden md:flex gap-6 mr-6">
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Dashboard</a>
+<a class="text-sm font-bold text-primary border-b-2 border-primary" href="#">Impact Ledger</a>
+<a class="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-primary" href="#">Calculators</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="h-10 w-10 rounded-full bg-primary/20 border-2 border-primary/10 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Avatar of Alex Rivers impact pioneer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa3XnI704c3VGJ8yF9FPtPwFEL_KS3SZ4DdL6ofDZHX83NWCOTezrXUq4w71vGU3V7akHa3jYl5ljyxSm7gGMpG7-reXx6LcyrFZRftHY-tcJfoIsZ7FT8bpxxXu6QLncGvkHC5MnxOcIubQIiQ-Mr-kgbTaA9kWdlInlRCNykPf0Rzv-TiYp0CosDuMrkSaNFecsqnoxVLTFIQVmOPE7OubspU0tTk2SAhLDKAO8QuqObBXhwmK3U8Zd8STAwl8yWzmncR-URi7Y"/>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-7xl mx-auto w-full p-4 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Profile Sidebar -->
+<aside class="lg:col-span-3 flex flex-col gap-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+<div class="flex flex-col items-center text-center">
+<div class="relative size-24 mb-4">
+<img class="rounded-full bg-slate-100 dark:bg-slate-800" data-alt="Alex Rivers profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuANmTcGdqzsS6EyZXYcFB9JBZJ7ojiD6npmABwXFdxx2TRIj8r2A75YcQ_NgGAsWdEEtFj7sGJf60fYxzXk3opf3dzv6MT6Y8dGpiXm-fnWs-hQ1BPd5o8SQt9Za7sV29rcn_BROq3UHscqS2mR6-s0B0R8mYtW_tAA8xiGHOOdOwLLIbHqRyXtAZUGlkpQQdNe3-hVJKO6gEp7fJZHlROGGE-XbfqXDVwsBA3GBWTpWISQe0cTBsvvpRlN5nrlvHx6rRAGvySowaM"/>
+<div class="absolute bottom-0 right-0 bg-primary text-white p-1 rounded-full text-[10px] font-bold">PRO</div>
+</div>
+<h1 class="text-xl font-bold text-slate-900 dark:text-slate-100">Alex Rivers</h1>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Impact Pioneer since 2022</p>
+<button class="w-full py-2 px-4 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg text-sm font-bold transition-colors">
+                            Edit Profile
+                        </button>
+</div>
+</div>
+<div class="bg-primary text-white p-6 rounded-xl shadow-lg flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<p class="text-xs uppercase tracking-wider font-bold opacity-80">Verified Score</p>
+<span class="material-symbols-outlined text-white/80">verified</span>
+</div>
+<div>
+<p class="text-4xl font-bold">14.2 <span class="text-lg font-normal">Tons</span></p>
+<p class="text-xs text-primary-200 mt-1">CO2e Compensation</p>
+</div>
+<div class="pt-4 border-t border-white/10 flex items-center gap-2">
+<span class="material-symbols-outlined text-green-300 text-sm">trending_up</span>
+<p class="text-sm font-medium">+1.2% from last month</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-sm font-bold">Impact Ledger</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800" href="#">
+<span class="material-symbols-outlined">calculate</span>
+<span class="text-sm font-medium">Logic Hub</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Area -->
+<div class="lg:col-span-9 flex flex-col gap-8">
+<!-- Impact Ledger Table -->
+<section class="bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-slate-200 dark:border-slate-800 flex justify-between items-center">
+<h2 class="font-bold text-slate-900 dark:text-slate-100">Project Contributions</h2>
+<button class="text-xs font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">download</span> Export CSV
+                        </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm">
+<thead class="bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 uppercase text-[10px] tracking-widest font-bold">
+<tr>
+<th class="px-6 py-3">Date</th>
+<th class="px-6 py-3">Project Name</th>
+<th class="px-6 py-3">Type</th>
+<th class="px-6 py-3 text-right">Offset (CO2e)</th>
+<th class="px-6 py-3 text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+<tr>
+<td class="px-6 py-4 text-slate-500">Oct 12, 2023</td>
+<td class="px-6 py-4 font-medium">Amazon Basin Reforestation</td>
+<td class="px-6 py-4 text-slate-500">Bio-Carbon</td>
+<td class="px-6 py-4 text-right font-bold text-primary">2.4 t</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase">Verified</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-slate-500">Sep 28, 2023</td>
+<td class="px-6 py-4 font-medium">Danish Offshore Wind Expansion</td>
+<td class="px-6 py-4 text-slate-500">Renewable</td>
+<td class="px-6 py-4 text-right font-bold text-primary">1.8 t</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2 py-1 rounded bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 text-[10px] font-bold uppercase">Verified</span>
+</td>
+</tr>
+<tr>
+<td class="px-6 py-4 text-slate-500">Aug 15, 2023</td>
+<td class="px-6 py-4 font-medium">Direct Air Capture - Iceland</td>
+<td class="px-6 py-4 text-slate-500">Technological</td>
+<td class="px-6 py-4 text-right font-bold text-primary">0.5 t</td>
+<td class="px-6 py-4 text-center">
+<span class="px-2 py-1 rounded bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-bold uppercase">Processing</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Honest Estimation Logic Section -->
+<section class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h2 class="text-2xl font-bold text-slate-900 dark:text-slate-100">Honest Estimation Logic</h2>
+<p class="text-slate-600 dark:text-slate-400">Our AI-driven carbon calculator uses a multi-layered verification protocol to ensure maximum accuracy and zero greenwashing.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Step 1 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 relative">
+<div class="absolute -top-3 -left-3 bg-primary text-white size-8 rounded-full flex items-center justify-center font-bold text-sm">1</div>
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl">input</span>
+</div>
+<h3 class="font-bold mb-2">Data Ingestion</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Aggregates API data from utility bills, flight logs, and lifestyle inputs.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 relative">
+<div class="absolute -top-3 -left-3 bg-primary text-white size-8 rounded-full flex items-center justify-center font-bold text-sm">2</div>
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+</div>
+<h3 class="font-bold mb-2">AI Processing</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Neutral Neural Engine applies regional emission factors and lifecycle analysis.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 relative">
+<div class="absolute -top-3 -left-3 bg-primary text-white size-8 rounded-full flex items-center justify-center font-bold text-sm">3</div>
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl">rule</span>
+</div>
+<h3 class="font-bold mb-2">Cross-Ref</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Verified against IPPC guidelines and third-party environmental standards.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200 dark:border-slate-800 relative">
+<div class="absolute -top-3 -left-3 bg-primary text-white size-8 rounded-full flex items-center justify-center font-bold text-sm">4</div>
+<div class="text-primary mb-4">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+<h3 class="font-bold mb-2">Ledger Lock</h3>
+<p class="text-xs text-slate-500 dark:text-slate-400">Calculated impact is hashed and stored in your immutable impact ledger.</p>
+</div>
+</div>
+<!-- Visual Breakdown / Chart Simulation -->
+<div class="bg-slate-900 text-slate-300 p-8 rounded-xl border border-slate-800">
+<div class="flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1 space-y-4">
+<h3 class="text-white text-lg font-bold">Engine Distribution</h3>
+<div class="space-y-3">
+<div>
+<div class="flex justify-between text-xs mb-1 uppercase tracking-wider font-bold">
+<span>Direct Emissions (Scope 1)</span>
+<span class="text-white">42%</span>
+</div>
+<div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[42%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1 uppercase tracking-wider font-bold">
+<span>Energy Consumption (Scope 2)</span>
+<span class="text-white">28%</span>
+</div>
+<div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[28%] opacity-80"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs mb-1 uppercase tracking-wider font-bold">
+<span>Indirect Supply Chain (Scope 3)</span>
+<span class="text-white">30%</span>
+</div>
+<div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[30%] opacity-60"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-64 aspect-square flex flex-col items-center justify-center border-4 border-slate-800 rounded-full relative">
+<div class="text-center">
+<p class="text-3xl font-bold text-white">98.4%</p>
+<p class="text-[10px] uppercase font-bold tracking-widest text-slate-500">Logic Accuracy</p>
+</div>
+<div class="absolute inset-0 rounded-full border-t-4 border-primary" style="transform: rotate(45deg);"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Certificates & Badges -->
+<section>
+<h3 class="font-bold text-slate-900 dark:text-slate-100 mb-4">Official Certificates</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="size-12 bg-primary/10 rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="text-sm font-bold">Q3 2023 Compensation Cert</p>
+<p class="text-xs text-slate-500">ID: CF-9920-X12</p>
+</div>
+<button class="ml-auto text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg">
+<div class="size-12 bg-primary/10 rounded flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="text-sm font-bold">Annual Impact Report 2022</p>
+<p class="text-xs text-slate-500">ID: CF-8812-Y04</p>
+</div>
+<button class="ml-auto text-primary">
+<span class="material-symbols-outlined">download</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark py-8 px-10">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-2 text-primary opacity-50 grayscale">
+<div class="size-6">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-sm font-bold">Carbon Fix Impact Ledger</span>
+</div>
+<div class="flex gap-8">
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Methodology</a>
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Privacy Protocol</a>
+<a class="text-xs text-slate-500 hover:text-primary" href="#">Audit Status</a>
+</div>
+<p class="text-xs text-slate-400">© 2023 Carbon Fix. All calculations verified.</p>
+</div>
+</footer>
+</div>
+</body></html>
