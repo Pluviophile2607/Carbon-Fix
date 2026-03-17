@@ -1,0 +1,6 @@
+*.qoder
+dist
+node_modules
+.env
+.env.local
+build_error.txt
