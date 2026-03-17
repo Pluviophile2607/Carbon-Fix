@@ -6,7 +6,7 @@ import {
   useUser,
   useAuth,
 } from "@clerk/react";
-import Footer from "./components/Footer";
+import Footer from "../components/Footer";
 
 // Project data
 const projectsData = [

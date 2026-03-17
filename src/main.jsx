@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { ClerkProvider } from "@clerk/react";
-import App from "./src/App.jsx";
-import { CLERK_PUBLISHABLE_KEY } from "./src/clerk-config.js";
+import App from "./App.jsx";
+import { CLERK_PUBLISHABLE_KEY } from "./clerk-config.js";
 
 console.log("main.jsx: started with ClerkProvider");
 

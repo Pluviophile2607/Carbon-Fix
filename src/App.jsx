@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar";
-import LandingPage from "./LandingPage";
-import ProjectMarketplace from "./ProjectMarketplace";
-import EvidenceDashboard from "./EvidenceDashboard";
-import ImpactLedger from "./ImpactLedger";
-import CoreModels from "./CoreModels";
+import LandingPage from "./pages/LandingPage";
+import ProjectMarketplace from "./pages/ProjectMarketplace";
+import EvidenceDashboard from "./pages/EvidenceDashboard";
+import ImpactLedger from "./pages/ImpactLedger";
+import CoreModels from "./pages/CoreModels";
 
 function App() {
   console.log("App component: rendering");
