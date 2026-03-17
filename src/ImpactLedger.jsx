@@ -6,7 +6,7 @@ import {
   useUser,
   useAuth,
 } from "@clerk/react";
-import Footer from "../components/Footer";
+import Footer from "./Footer";
 
 // Mock data for user contributions (in a real app, this would come from your backend)
 const mockContributions = [
